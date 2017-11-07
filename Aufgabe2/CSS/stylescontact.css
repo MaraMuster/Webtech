@@ -1,0 +1,151 @@
+form {
+  background-color: #efefef;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 16px;
+
+}
+
+
+input[type=text] {
+    padding: 12px 20px;
+    margin-bottom: 30px:
+    box-sizing: border-box;
+    font-weight: bold;
+    width: 250px;
+    align: center;
+    font-size: 14px;
+}
+
+input[type=text]:focus {
+    background-color: #efefef;
+}
+
+input[type=email] {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 16px;
+    width: 295px;
+    align: center;
+    margin-bottom: 20px;
+}
+
+input[type=email]:focus {
+    background-color: #efefef;
+
+}
+
+input[type=date] {
+  height: 30px;
+  width: 200px;
+  font-size: 16px;
+}
+
+select, option {
+  margin-left: 10px;
+  height: 50px;
+  align: center;
+  width: 300px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 49%;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+textarea {
+  margin-left: 20px;
+  padding: 12px 20px;
+  width: 260px;
+  align: center;
+  text-align: left;
+  height: 200px;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    letter-spacing: 0.15em;
+    background-color: #efefef;
+  }
+
+#page {
+    max-width: 940px;
+    min-width: 720px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #000;
+    background-color: #ffffff;
+  }
+
+
+
+ul {
+    width: 570px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    text-align: center;
+  }
+
+li {
+    display: inline;
+    margin: 0px 3px;
+  }
+
+p {
+
+  margin: auto;
+  text-align: center;
+ }
+
+ .space {
+   display: block;
+   background-color: gold;
+   padding-top: 20px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+ }
+
+ img {
+   width: 150px;
+   height: 150px;
+ }
+
+
+ .logo {
+   width: 700px;
+   height: 80px;
+   margin-left: 120px;
+   margin-right: 70px;
+   margin-bottom: 10px;
+ }
+
+ a {
+   color: #000000;
+   text-transform: uppercase;
+   text-decoration: none; padding: 6px 18px 5px 18px;
+  }
+
+ a:hover, a.on {
+     color: gold;
+     background-color: #ffffff;
+   }
+
+  footer {
+     display:block;
+     text-align: center;
+     border-top: 2px dotted black;
+     margin: 2px;
+   }

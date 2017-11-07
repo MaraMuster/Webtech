@@ -1,0 +1,156 @@
+body {
+    font-size: 12px;
+    font-family: "Arial", sans-serif, monospace;
+    letter-spacing: 0.15em;
+    background-color: #efefef;
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+
+#page {
+    max-width: 940px;
+    min-width: 720px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #000;
+    background-color: #ffffff;
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+
+
+
+ul {
+    width: 570px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    text-align: center;
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+
+li {
+    display: inline;
+    margin: 0px 3px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+
+p {
+
+  margin: auto;
+  font-weight: normal;
+  font-family: 'Saira Semi Condensed', sans-serif;
+ }
+
+ .section {
+   display:block;
+   margin-bottom: 70px;
+   padding: 20px;
+   font-family: 'Saira Semi Condensed', sans-serif;
+   font-size:
+ }
+
+ .center {
+   display: block;
+   text-align: center;
+   font-family: 'Saira Semi Condensed', sans-serif;
+ }
+
+ .space {
+   display: block;
+   background-color: gold;
+   padding-top: 20px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+ }
+
+ .three-section {
+  padding: 10px;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 5px;
+  text-align: left;
+  background-color: #efefef;
+  margin-bottom: 20px;
+  font-size: 12px;
+  }
+
+h4 {
+  border-top: 2px dotted gold;
+  border-bottom: 2px dotted gold;
+}
+ img {
+   width: 150px;
+   height: 150px;
+ }
+
+
+ .logo {
+   width: 700px;
+   height: 80px;
+   margin-left: 120px;
+   margin-right: 70px;
+   margin-bottom: 10px;
+ }
+
+ .links {
+float: left;
+margin-right: 10px;
+border: 2px solid black;
+}
+
+.rechts {
+  float:right;
+  margin-left: 10px;
+  border: 2px solid black;
+}
+
+a {
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none; padding: 6px 18px 5px 18px;
+ }
+
+a:hover, a.on {
+    color: gold;
+    background-color: #ffffff;
+  }
+
+table{
+  align: center:
+  border-collapse: separate;
+  border-spacing: 25px 35px;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  border: 2px dotted black;
+  margin-bottom: 50px;
+}
+
+.gold {
+  background-color: gold;
+  font-weight: bolder;
+  font-style: oblique;
+  font-size: 18px;
+}
+
+.dottedborder {
+  border-bottom: 2px dotted gold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer {
+  display:block;
+  text-align: center;
+  border-top: 2px dotted black;
+  margin: 2px;
+  font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+iframe{
+  margin-left: 60px;
+  width: 80%;
+  height: 400px;
+  padding: 20px;
+}
