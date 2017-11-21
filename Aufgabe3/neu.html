@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Produkt hinzufügen</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/create.css" rel="stylesheet">
+
+
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>Splendr. Trend different.</h1>
+    </div>
+
+
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="#">
+        <span> Splendr. </span>
+    </a>
+    </div>
+    <div>
+
+    <div id="sk-top-welcome">
+    <ul class="nav navbar-nav navbar-right">
+    <li><button type="button" class="btn btn-danger btn-margin-right navbar-btn"><i class="fa fa-sign-in" aria-hidden="true"></i> Login </button></li>
+    <li><button type="button" class="btn btn-success btn-margin-right navbar-btn">Registrieren</button></li>
+    <li><button type="button" class="btn btn-primary btn-margin-right navbar-btn"> + Board anlegen</button></li>
+    </ul>
+    </div>
+
+    </div>
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="panel-group" id="accordion">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-file">
+                              </span>Produkt hinzufügen</a>
+                          </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Titel" required /> <br />
+                                          <input type="text" class="form-control" placeholder="URL zum Produkt" required />
+                                      </div>
+                                      <div class="form-group">
+                                          <textarea class="form-control" placeholder="Content" rows="5" required></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="category">
+                                              Category</label>
+                                          <select class="form-control" id="category">
+                                              <option>Elektronik</option>
+                                              <option>Fashion</option>
+                                              <option>Home and Deco</option>
+                                              <option>Garten</option>
+                                              <option>Sport</option>
+                                              <option>Sonstiges</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="tags">
+                                              Tags</label>
+                                          <input type="text" class="form-control" id="tags" placeholder="Tags" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="well well-sm well-primary">
+                                          <div class="input-group image-preview">
+                  <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                  <span class="input-group-btn">
+                      <!-- image-preview-clear button -->
+                      <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                          <span class="glyphicon glyphicon-remove"></span> Clear
+                      </button>
+                      <!-- image-preview-input -->
+                      <div class="btn btn-default image-preview-input">
+                          <span class="glyphicon glyphicon-folder-open"></span>
+                          <span class="image-preview-input-title">Browse</span>
+                          <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                      </div>
+                  </span>
+              </div><!-- /input-group image-preview [TO HERE]-->
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="well well-sm well-primary">
+                                          <form class="form form-inline " role="form">
+                                          <div class="form-group">
+                                              <input type="text" class="form-control" value="" placeholder="Date" required />
+                                          </div>
+                                          <div class="form-group">
+                                              <select class="form-control">
+                                                  <option>Draft</option>
+                                                  <option>Published</option>
+                                              </select>
+                                          </div>
+                                          <div class="form-group">
+                                              <button type="submit" class="btn btn-success btn-sm">
+                                                  <span class="glyphicon glyphicon-floppy-disk"></span>Speichern</button>
+                                              <button type="button" class="btn btn-default btn-sm">
+                                                  <span class="glyphicon glyphicon-eye-open"></span>Preview</button>
+                                          </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list">
+                              </span>Erweiterte Informationen (Meta-Daten)</a>
+                          </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Title" required />
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Description" required />
+                                      </div>
+                                      <div class="form-group">
+                                          <textarea class="form-control" placeholder="Keywords" required></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="well well-sm well-primary">
+                                          <form class="form form-inline " role="form">
+                                          <div class="form-group">
+                                              <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-floppy-disk">
+                                              </span>Save</a>
+                                          </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Contact </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Important Links </h3>
+                    <ul>
+                        <li> <a href="#"> Admission </a> </li>
+                        <li> <a href="#"> Academic </a> </li>
+                        <li> <a href="#"> Career </a> </li>
+                        <li> <a href="#"> Administration </a> </li>
+                        <li> <a href="#"> Notice </a> </li>
+                        <li> <a href="#"> Tender </a> </li>
+                        <li> <a href="login.php"> Teacher Login </a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3> Location </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © 2017, JKKNIU. All rights reserved.</p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                    <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom-->
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

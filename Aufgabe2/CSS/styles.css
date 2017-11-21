@@ -70,7 +70,7 @@ p {
   -webkit-column-count: 3;
   -webkit-column-gap: 1em;
   column-count: 3;
-  column-gap: 5px;
+  column-gap: 8px;
   text-align: left;
   background-color: #efefef;
   margin-bottom: 20px;
