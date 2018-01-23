@@ -34,7 +34,7 @@ if (is_null($temperatur)) {
 
 } else {
 
-    echo "<center>The weather in " . utf8_decode($stadt) . " is " . $temperatur . " degrees celsius " .  "and the status is " . $sonnenaufgang . " proudly presented without yahoo API";
+    echo "The weather in " . utf8_decode($stadt) . " is " . $temperatur . " degrees celsius " .  "and the status is " . $sonnenaufgang . " proudly presented without yahoo API";
 
 }
 

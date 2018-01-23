@@ -1,0 +1,156 @@
+
+@media screen {
+
+body {
+  background-color: #D8D8D8;
+}
+
+h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+p {
+  font-weight: bolder;
+  font-size: 18px;
+  color: black;
+}
+
+
+
+
+form {
+  border: 2px solid black;
+  padding: 5px;
+  width: 350px;
+  margin: auto;
+  background-color:white;
+}
+
+input[type=text]{
+  float: right;
+  width: 250px;
+  height: 25px;
+  border: 0.5px solid black;
+  font-size: 20px;
+}
+button {
+  margin-top: 20px;
+  width: inherit;
+  border: 1px solid black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: inherit;
+  height: 25px;
+  font-size: 20px;
+}
+
+#paw {
+ display: none;
+}
+
+#name {
+  display:none;
+}
+
+#result {
+  display: none;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+}
+
+
+
+
+@media print {
+body {
+  border: 5px dotted #33cccc;
+  padding: 5px;
+  margin: 15px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+  textarea {
+    display: none;
+  }
+
+select {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+  button {
+    display: none;
+  }
+
+  p {
+  font-family: courier;
+  margin-left: 250px;
+  margin-right: 250px;
+  }
+
+  select {
+    display: none;
+  }
+
+  #ssid {
+    display: none;
+  }
+
+  #pw {
+    display: none;
+  }
+
+  #paw {
+    font-family: courier;
+    font-size: 50px;
+    color: #33cccc;
+  }
+
+
+  #name {
+    font-family: courier;
+    font-size: 50px;
+    color: #33cccc;
+
+  }
+
+  .screen {
+    display: none;
+  }
+
+
+  input[type=checkbox].hidden{
+     display:none;
+  }
+
+  label {
+    display:none;
+  }
+
+  a[href]:after {
+  content: none !important;
+}
+
+@page {
+  margin: 0;
+}
+
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Wifi QR-Code Generator</title>
+  <meta charset="utf8" />
+  <link rel="stylesheet" href="css/stylesheet.css" />
+  <script type="text/javascript" src="js/qrcode.js"></script>
+  <script type="text/javascript" src="js/html5-qrcode.js"></script>
+</head>
+<h1> Wifi Connection Sheet</h1>
+
+<form name="QRform" id="print">
+<p>
+  SSID:<input type="text" id="ssid" name="ssids" rows="1" onkeyup='updateQRCode(this.value)' onclick="this.focus();this.select();" value=""></textarea> <br />
+<p id="name">SSID: </p>
+</p>
+
+<br />
+<p>
+  Password: <input type="text" id="pw" rows="1" onkeyup='updateQRCode(this.value)' onclick="this.focus();this.select();" value=""></textarea>
+<p id="paw">Password: </p>
+  <br />
+  <input type="checkbox" id="hide" name="hidepassword" value="hidden" />
+  <label for="hide">Hidden</label>
+</p>
+
+
+  <select name="Verschlüsselung">
+  <option value="WPA2">WPA2</option>
+  <option value="WPA2">WPA</option>
+  <option value="WEP">WEP</option>
+  </select>
+
+
+
+
+  <button type="button" id="printsheet" onClick="printDiv('print'); storage();" >Print Sheet</button>
+
+  <div class="qrcode" id="qrcode"></div>
+
+</form>
+
+<script type="text/javascript">
+  function updateQRCode(text) {
+
+    var element = document.getElementById("print");
+
+    var bodyElement = document.body;
+    if(element.lastChild)
+      element.replaceChild(showQRCode(text), element.lastChild);
+    else
+      element.appendChild(showQRCode(text));
+
+  }
+
+
+
+  function printDiv(divName) {
+    var name = document.getElementById("ssid").value;
+    document.getElementById("name").innerHTML = name;
+
+    var password = document.getElementById("pw").value;
+    document.getElementById("paw").innerHTML = password;
+
+       var printContents = document.getElementById(divName).innerHTML;
+       var originalContents = document.body.innerHTML;
+
+       document.body.innerHTML = printContents;
+
+
+       window.print();
+
+       document.body.innerHTML = originalContents;
+  }
+
+  function concatenate(){
+    var ssid = document.getElementById("ssid").value;
+    var pw = document.getElementById("pw").value;
+
+    var concatenate = "WIFI:S:" + ssid + "P:" + pw;
+    return concatenate;
+
+  }
+
+  function storage() {
+      document.getElementById('ssid').value = window.localStorage['ssids'];
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
