@@ -11,13 +11,13 @@
 
 <form name="QRform" id="print">
 <p>
-  SSID:<input type="text" id="ssid" name="ssids" rows="1" onkeyup='updateQRCode(this.value)' onclick="this.focus();this.select();" value=""></textarea> <br />
+  SSID:<input type="text" id="ssid" name="ssids" value=""></textarea> <br />
 <p id="name">SSID: </p>
 </p>
 
 <br />
 <p>
-  Password: <input type="text" id="pw" rows="1" onkeyup='updateQRCode(this.value)' onclick="this.focus();this.select();" value=""></textarea>
+  Password: <input type="text" id="pw" value=""></textarea>
 <p id="paw">Password: </p>
   <br />
   <input type="checkbox" id="hide" name="hidepassword" value="hidden" />
@@ -25,7 +25,7 @@
 </p>
 
 
-  <select name="Verschlüsselung">
+  <select name="Verschlüsselung" id="select">
   <option value="WPA2">WPA2</option>
   <option value="WPA2">WPA</option>
   <option value="WEP">WEP</option>
@@ -34,7 +34,7 @@
 
 
 
-  <button type="button" id="printsheet" onClick="printDiv('print'); storage();" >Print Sheet</button>
+  <button type="button" id="printsheet" onClick="updateQRCode(text)" >Print Sheet</button>
 
   <div class="qrcode" id="qrcode"></div>
 
@@ -76,18 +76,14 @@
   function concatenate(){
     var ssid = document.getElementById("ssid").value;
     var pw = document.getElementById("pw").value;
+    var enc = document.getElementById("select").value;
+    var hid = document.getElementById("hide").value;
 
-    var concatenate = "WIFI:S:" + ssid + "P:" + pw;
+
+    concatenate = "WIFI:S:" + ssid + ";T:" + enc +  ";P:" + pw + ";H:" +hid + ";";
     return concatenate;
 
   }
-
-  function storage() {
-      document.getElementById('ssid').value = window.localStorage['ssids'];
-  }
-
-
-
 
 
 </script>
