@@ -7,17 +7,22 @@
   <script type="text/javascript" src="js/qrcode.js"></script>
   <script type="text/javascript" src="js/html5-qrcode.js"></script>
 </head>
+<body>
+  <script type="text/javascript">
+    showQRCode("test");
+  </script>
+
 <h1> Wifi Connection Sheet</h1>
 
 <form name="QRform" id="print">
 <p>
-  SSID:<input type="text" id="ssid" name="ssids" value=""></textarea> <br />
+  SSID:<input type="text" id="ssid"  name="ssids" value=""> <br />
 <p id="name">SSID: </p>
 </p>
 
 <br />
 <p>
-  Password: <input type="text" id="pw" value=""></textarea>
+  Password: <input type="text" id="pw" value="">
 <p id="paw">Password: </p>
   <br />
   <input type="checkbox" id="hide" name="hidepassword" value="hidden" />
@@ -32,15 +37,24 @@
   </select>
 
 
-
-
-  <button type="button" id="printsheet" onClick="updateQRCode(text)" >Print Sheet</button>
+  <button type="button" id="printsheet" onClick="printDiv('print'); updateQRCode(concatenate())" >Print Sheet</button>
+  <button type="button" id="printsheet"  onClick="updateQRCode(concatenate())" >update</button>
 
   <div class="qrcode" id="qrcode"></div>
 
 </form>
 
 <script type="text/javascript">
+
+function concatenate(){
+  ssid = String(document.getElementById("ssid").value);
+  pw = String(document.getElementById("pw").value);
+  enc = String(document.getElementById("select").value);
+  hid = String(document.getElementById("hide").value);
+  x = 'WIFI:S:' + ssid + ';T:' + enc +  ';P:' + pw + ';H:' + hid + ';';
+  return x;
+}
+
   function updateQRCode(text) {
 
     var element = document.getElementById("print");
@@ -73,18 +87,12 @@
        document.body.innerHTML = originalContents;
   }
 
-  function concatenate(){
-    var ssid = document.getElementById("ssid").value;
-    var pw = document.getElementById("pw").value;
-    var enc = document.getElementById("select").value;
-    var hid = document.getElementById("hide").value;
 
 
-    concatenate = "WIFI:S:" + ssid + ";T:" + enc +  ";P:" + pw + ";H:" +hid + ";";
-    return concatenate;
 
-  }
-
+function test(){
+  document.getElementById("test").value = concatenate();
+}
 
 </script>
 </body>
