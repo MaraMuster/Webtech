@@ -8,11 +8,14 @@ body {
 h1 {
   padding-bottom: 20px;
   text-align: center;
+  font-family: 'Lobster';
+  font-size: 40px;
 }
 p {
   font-weight: bolder;
-  font-size: 18px;
-  color: black;
+  font-size: 16px;
+  color: darkgrey;
+  font-family: 'Press Start 2P';
 }
 
 
@@ -28,10 +31,21 @@ form {
 
 input[type=text]{
   float: right;
-  width: 250px;
+  width: 200px;
   height: 25px;
   border: 0.5px solid black;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: 'Press Start 2P';
+}
+
+input[type=checkbox]{
+  height: 20px;
+  width: 20px;
+}
+
+label {
+  font-family: 'Press Start 2P';
+  font-size: 16px;
 }
 button {
   margin-top: 20px;
@@ -39,12 +53,16 @@ button {
   border: 1px solid black;
   font-size: 18px;
   margin-bottom: 10px;
+  font-family: 'Press Start 2P';
+  height: 35px;
 }
 
 select {
   width: inherit;
-  height: 25px;
-  font-size: 20px;
+  height: 30px;
+  font-size: 16px;
+  font-family: 'Press Start 2P';
+  margin-bottom: 25px;
 }
 
 #paw {
@@ -120,14 +138,14 @@ input {
 
   #paw {
     font-family: courier;
-    font-size: 50px;
+    font-size: 35px;
     color: #33cccc;
   }
 
 
   #name {
     font-family: courier;
-    font-size: 50px;
+    font-size: 35px;
     color: #33cccc;
 
   }

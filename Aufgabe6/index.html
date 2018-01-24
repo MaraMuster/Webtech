@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <title>Wifi QR-Code Generator</title>
   <meta charset="utf8" />
   <link rel="stylesheet" href="css/stylesheet.css" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <script type="text/javascript" src="js/qrcode.js"></script>
   <script type="text/javascript" src="js/html5-qrcode.js"></script>
 </head>
+
 <body>
   <script type="text/javascript">
     showQRCode("test");
   </script>
 
-<h1> Wifi Connection Sheet</h1>
+  <h1> Wifi Connection Sheet</h1>
 
-<form name="QRform" id="print">
-<p>
-  SSID:<input type="text" id="ssid"  name="ssids" value=""> <br />
-<p id="name">SSID: </p>
-</p>
+  <form name="QRform" id="print">
+    <p>
+      SSID:<input type="text" id="ssid" name="ssids" value=""> <br />
+      <p id="name">SSID: </p>
+    </p>
 
-<br />
-<p>
-  Password: <input type="text" id="pw" value="">
-<p id="paw">Password: </p>
-  <br />
-  <input type="checkbox" id="hide" name="hidepassword" value="hidden" />
-  <label for="hide">Hidden</label>
-</p>
+    <br />
+    <p>
+      Password: <input type="text" id="pw" value="">
+      <p id="paw">Password: </p>
+      <br />
+      <input type="checkbox" id="hide" name="hidepassword" value="false" checked="true" />
+      <label for="hide">Hidden</label>
+    </p>
 
 
-  <select name="Verschlüsselung" id="select">
+    <select name="Verschlüsselung" id="select">
   <option value="WPA2">WPA2</option>
   <option value="WPA2">WPA</option>
   <option value="WEP">WEP</option>
   </select>
 
 
-  <button type="button" id="printsheet" onClick="printDiv('print'); updateQRCode(concatenate())" >Print Sheet</button>
-  <button type="button" id="printsheet"  onClick="updateQRCode(concatenate())" >update</button>
-
-  <div class="qrcode" id="qrcode"></div>
-
-</form>
-
-<script type="text/javascript">
-
-function concatenate(){
-  ssid = String(document.getElementById("ssid").value);
-  pw = String(document.getElementById("pw").value);
-  enc = String(document.getElementById("select").value);
-  hid = String(document.getElementById("hide").value);
-  x = 'WIFI:S:' + ssid + ';T:' + enc +  ';P:' + pw + ';H:' + hid + ';';
-  return x;
-}
-
-  function updateQRCode(text) {
-
-    var element = document.getElementById("print");
-
-    var bodyElement = document.body;
-    if(element.lastChild)
-      element.replaceChild(showQRCode(text), element.lastChild);
-    else
-      element.appendChild(showQRCode(text));
-
-  }
+    <button type="button" id="printsheet" onClick="updateQRCode(concatenate())"> Generate QR-Code</button>
+    <button type="button" id="printsheet" onClick="printDiv('print'); updateQRCode(concatenate())">Print Sheet</button>
 
 
+    <div class="qrcode" id="qrcode"></div>
 
-  function printDiv(divName) {
-    var name = document.getElementById("ssid").value;
-    document.getElementById("name").innerHTML = name;
+  </form>
 
-    var password = document.getElementById("pw").value;
-    document.getElementById("paw").innerHTML = password;
+  <script type="text/javascript">
+    function concatenate() {
+      ssid = String(document.getElementById("ssid").value);
+      pw = String(document.getElementById("pw").value);
+      enc = String(document.getElementById("select").value);
+      hid = String(document.getElementById("hide").value);
+      x = 'WIFI:S:' + ssid + ';T:' + enc + ';P:' + pw + ';H:' + hid + ';';
+      return x;
+    }
 
-       var printContents = document.getElementById(divName).innerHTML;
-       var originalContents = document.body.innerHTML;
+    function updateQRCode(text) {
 
-       document.body.innerHTML = printContents;
+      var element = document.getElementById("print");
 
+      var bodyElement = document.body;
+      if (element.lastChild)
+        element.replaceChild(showQRCode(text), element.lastChild);
+      else
+        element.appendChild(showQRCode(text));
 
-       window.print();
-
-       document.body.innerHTML = originalContents;
-  }
+    }
 
 
 
+    function printDiv(divName) {
+      var name = document.getElementById("ssid").value;
+      document.getElementById("name").innerHTML = name;
 
-function test(){
-  document.getElementById("test").value = concatenate();
-}
+      var password = document.getElementById("pw").value;
+      document.getElementById("paw").innerHTML = password;
 
-</script>
+      var printContents = document.getElementById(divName).innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+    }
+
+
+
+
+    function test() {
+      document.getElementById("test").value = concatenate();
+    }
+  </script>
 </body>
+
 </html>
